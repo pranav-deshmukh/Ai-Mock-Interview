@@ -1,5 +1,6 @@
 
 import { signIn, signOut, auth } from "@/auth"
+import { Button } from "../ui/button";
  
 export default async function SignIn() {
     const session = await auth();
@@ -11,7 +12,7 @@ export default async function SignIn() {
         await signIn("google", {redirectTo: "/dashboard"});
       }}
     >
-      <button type="submit">Signin with Google</button>
+      <Button type="submit">Signin with Google</Button>
     </form>
   )
 } 
